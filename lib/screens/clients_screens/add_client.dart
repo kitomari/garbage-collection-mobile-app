@@ -17,8 +17,6 @@ class AddClientScreen extends StatefulWidget {
 
 class _AddClientScreenState extends State<AddClientScreen> {
 
-  // final String qrCodes;
-  // _AddClientScreenState(this.qrCodes);
   final _registerFormKey = GlobalKey<FormState>();
 
   final TextEditingController _qrCodeController = TextEditingController();

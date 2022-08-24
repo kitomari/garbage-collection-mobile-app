@@ -55,22 +55,4 @@ class AddCustomer{
       throw e;
     }
   }
-  // void insertCustomer({required String name, required String hno, required String mobile,required String street, required String district, required String region,required String qr_code, required String category}) async{
-  //   try{
-  //     print("chomozaa");
-  //       http.Response response = await http.post(
-  //       Uri.parse('$uri/api/add_customer.php'),
-  //       body: {'name': name, 'hno': hno, 'mobile': mobile, 'street': street, 'district': district, 'region': region, 'qr_code': qr_code, 'category': category},
-  //       headers: <String, String>{'Content-Type': 'application/json'}
-  //     );
-  //     print("Nje ya bodi");
-  //     print(response.body);
-  //     if(response.statusCode == 200){
-  //       final customerData = jsonDecode(response.body);
-  //       print("My data is: $customerData");
-  //     }
-  //   }catch(e){
-  //     return null;
-  //   }
-  // }
 }

@@ -29,17 +29,11 @@ class AddCollection{
         }else{
           return  null;
         }
-        // return qrInfo;
       }
   }
 
   Future<Map<String,dynamic>> addCollection({required String name, required String qr_code,required String category, required String amount, required String user_id,  required String date}) async{
     try{
-      // print('$qr_code');
-      // print('$name');
-      // print('$category');
-      // print('$user_id');
-      // print('$amount');
       http.Response response = await http.post(
         Uri.parse('$uri/api/add_collection.php'),
         body: jsonEncode({'name': name, 'qr_code': qr_code, 'category': category, 'amount': amount, 'user_id': DataServices.userInfo!['id'], 'date': formatted}),
@@ -57,24 +51,4 @@ class AddCollection{
       throw e;
     }
   }
-
-  // static Future<Map<String, dynamic>> viewAllCustomer() async{
-  //   try{
-  //     http.Response response = await http.post(
-  //       Uri.parse('$uri/api/view_customer.php'),
-  //       body: jsonEncode({'user_id': DataServices.userInfo!['id']}),
-  //       headers: <String, String>{'Content-Type': 'application/json'}
-  //     );
-  //     print("Data hizooo ${response.body}");
-  //     if(response.statusCode == 200){
-
-  //       final allCustomer = jsonDecode(response.body);
-  //       var homeData = allCustomer['data'];
-  //       return homeData;
-  //     }
-  //     return {};
-  //   }catch(e){
-  //     throw e;
-  //   }
-  // }
 }

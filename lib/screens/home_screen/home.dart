@@ -2,20 +2,14 @@ import 'dart:convert';
 
 import 'package:collection_app/common_widgets/activities_card.dart';
 import 'package:collection_app/common_widgets/history_card.dart';
-// import 'package:collection_app/common_widgets/screen_loader.dart';
 import 'package:collection_app/constants/data_services.dart';
 import 'package:collection_app/constants/main_url.dart';
 import 'package:http/http.dart' as http;
-// import 'package:collection_app/models/customer_model.dart';
-// import 'package:collection_app/providers/customer_provider.dart';
 import 'package:collection_app/screens/clients_screens/scan_qr_to_add.dart';
 import 'package:collection_app/screens/clients_screens/scan_qr_to_register.dart';
-// import 'package:collection_app/screens/home_screen/client_screen.dart';
 import 'package:collection_app/screens/home_screen/history_screen.dart';
-// import 'package:collection_app/services/add_client_service.dart';
 import 'package:flutter/material.dart';
-// import 'package:provider/provider.dart';
-// import 'package:provider/provider.dart';
+
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({ Key? key }) : super(key: key);
@@ -25,31 +19,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // AddCustomer viewClient  = new AddCustomer();
-  // bool _isReloading = false;
-
-  // Future<void>_reloadData() async{
-  //   setState(() {
-  //     _isReloading = true;
-  //   });
-  //   await AddCustomer.viewAllCustomer().then((data) async{
-
-  //     final customerData = data['data'];
-  //     setState(() {
-  //       DataServices.viewClient = customerData;
-  //     });
-  //   }).whenComplete((){
-  //     setState(() {
-  //       _isReloading = false;
-  //     });
-  //   });
-  // }
-
-  // @override
-  //   void initState(){
-  //     _reloadData();
-  //     super.initState();
-  //   }
 
     bool _isReloading = false;
     

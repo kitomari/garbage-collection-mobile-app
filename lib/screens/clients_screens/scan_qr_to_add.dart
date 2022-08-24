@@ -4,7 +4,6 @@ import 'dart:io';
 import 'package:collection_app/constants/data_services.dart';
 import 'package:collection_app/constants/main_url.dart';
 import 'package:collection_app/screens/clients_screens/scann_customer.dart';
-import 'package:collection_app/services/add_collection_service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
@@ -22,11 +21,6 @@ class _QrCodeScannerState extends State<QrCodeScanner> {
   final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
   Barcode? result;
   QRViewController? controller;
-
-    // String name;
-    // String category;
-    // String amount;
-    // String user_id;
 
   Future<void> compareQrCode({required String qr_code}) async{
     http.Response response = await http.post(

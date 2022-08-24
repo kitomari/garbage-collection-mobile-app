@@ -5,12 +5,10 @@ import 'package:collection_app/common_widgets/auth_button.dart';
 import 'package:collection_app/common_widgets/text_field_input.dart';
 import 'package:collection_app/constants/data_services.dart';
 import 'package:collection_app/constants/main_url.dart';
-import 'package:collection_app/providers/user_provider.dart';
 import 'package:collection_app/screens/bottom_bar.dart';
 import 'package:collection_app/utilits/handle_error.dart';
 import 'package:collection_app/utilits/snack_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 

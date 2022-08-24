@@ -2,7 +2,6 @@ import 'package:collection_app/common_widgets/info_card.dart';
 import 'package:collection_app/constants/data_services.dart';
 import 'package:collection_app/screens/home_screen/edit_profile.dart';
 import 'package:collection_app/screens/login_screen.dart';
-// import 'package:collection_app/common_widgets/custom_card.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
