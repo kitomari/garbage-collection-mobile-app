@@ -49,7 +49,8 @@ class _AddClientScreenState extends State<AddClientScreen> {
   }
 
   void addClient(){
-    print('wewe mtoto');
+    print('wewe mtotoooo');
+    
     newCustomer.addCustomer(
       qr_code: widget.qrCodes, 
       name: _customerNameController.text, 
@@ -60,8 +61,10 @@ class _AddClientScreenState extends State<AddClientScreen> {
       region: _regionController.text, 
       category: _businessTypeController.text,
       amount: _priceController.text,
-      user_id: DataServices.userInfo![0]['id'], 
+      user_id: DataServices.userInfo!['id'],
     );
+    
+    // print('Dolaa');
   }
 
   @override
@@ -79,6 +82,7 @@ class _AddClientScreenState extends State<AddClientScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // print('Id yako ni: ${DataServices.userInfo!['user_data']['id']}');
     return Scaffold(
       appBar: AppBar(
         title: Text("Register Client", style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: Colors.black)),

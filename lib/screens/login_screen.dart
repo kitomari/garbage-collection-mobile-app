@@ -65,6 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
         });
         // DataServices.userData = decodedMapData;
         print("Data za Shared ${DataServices.userInfo}");
+        print("Data za Shared ID ${DataServices.userInfo!['id']}");
         String? jina = prefs.getString(DataServices.userInfo!['names']);
         print(jina);
       }

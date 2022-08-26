@@ -33,7 +33,14 @@ class AddCollection{
   }
 
   Future<Map<String,dynamic>> addCollection({required String name, required String qr_code,required String category, required String amount, required String user_id,  required String date}) async{
+
     try{
+      print('Qrs: $qr_code');
+      print('$name');
+      print('$category');
+      print('$user_id');
+      print('$amount');
+
       http.Response response = await http.post(
         Uri.parse('$uri/api/add_collection.php'),
         body: jsonEncode({'name': name, 'qr_code': qr_code, 'category': category, 'amount': amount, 'user_id': DataServices.userInfo!['id'], 'date': formatted}),
