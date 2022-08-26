@@ -86,14 +86,6 @@ class _LoginScreenState extends State<LoginScreen> {
     _emailController.dispose();
     _passwordController.dispose();
   }
-
-  // loginUser(){
-  //   authServices.loginToDB(
-  //     context: context, 
-  //     email: _emailController.text, 
-  //     password: _passwordController.text,
-  //   );
-  // }
     loginUser(){
     loginToDB(
       context: context, 
@@ -164,9 +156,6 @@ class _LoginScreenState extends State<LoginScreen> {
                             // print('weweee');
                             showLoaderDialog(context);
                             if(_loginFormKey.currentState!.validate()){
-                              // SharedPreferences prefs = await SharedPreferences.getInstance();
-                              // prefs.setString('email', _emailController.text);
-                              // prefs.setString('password', _passwordController.text);
                               loginUser();
                               // print('is validating');
                             }

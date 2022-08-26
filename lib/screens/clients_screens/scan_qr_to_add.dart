@@ -23,7 +23,6 @@ class _QrCodeScannerState extends State<QrCodeScanner> {
   Barcode? result;
   QRViewController? controller;
 
-  // bool _isScanned = false;
   bool _isLoading = false;
 
   Future<dynamic> compareQrCode({String? qr_code}) async{
@@ -42,23 +41,12 @@ class _QrCodeScannerState extends State<QrCodeScanner> {
           "my_data": scannedData,
          
         };
-        // print('Scanned : $scannedData');
-        // return scannedData;
       }else{
         return {
           "code": response.statusCode
         };
       }
   }
-
-
-
-  //Send captured QR to the second screen
-  // void _sendQrToSecondScreen(BuildContext context){
-  //   String qrCaptured = result!.code.toString();
-  //   Navigator.push(context, MaterialPageRoute(builder: (context) => CapturedQrScreen(qrCodes: qrCaptured,)));
-  // }
-
   //In order to get hotreload to work we need to pause the camera if the platform is android and resume if iOS
 
   @override
@@ -78,61 +66,6 @@ class _QrCodeScannerState extends State<QrCodeScanner> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            // Text('Scan QR Code'),
-            // SizedBox(height: 20),
-            // _isScanned ? AlertDialog(
-            //   content: Center(
-            //     child: Text('QR: ${result!.code}'),
-            //   ),
-            //   // shape: shape,
-            //   title: Center(child: Text('QR CODE SCANNED')),
-            //   actionsAlignment: MainAxisAlignment.spaceBetween,
-            //   actionsPadding: const EdgeInsets.all(8),
-            //   actions: [
-            //     UniversalButton(
-            //       action: (){
-            //         setState(() {
-            //           _isScanned = false;
-            //         });
-            //         CircularProgressIndicator();
-            //           compareQrCode(qr_code: result!.code).then((value){
-            //             if(value['code'] == 200){
-            //               Navigator.pop(context);
-            //               Navigator.push(context, MaterialPageRoute(builder: (context) => CapturedQrScreen(data: value!['my_data']['data'][0])));
-            //             }
-            //           });
-            //       }, 
-            //       buttonColor: Colors.blue, 
-            //       child: Text('NEXT'), 
-            //       buttonWidth: 100, 
-            //       label: ''
-            //     ),
-
-            //     UniversalButton(
-            //       action: (){
-            //         setState(() {
-            //           _isScanned = false;
-            //         });
-            //       }, 
-            //       buttonColor: Colors.blue, 
-            //       child: Text('CANCEL'), 
-            //       buttonWidth: 100, 
-            //       label: ''
-            //     ),
-            //   ],
-            // ) : SizedBox(
-            //   height: 250,
-            //   width: 250,
-            //   child: QRView(
-            //     overlay: QrScannerOverlayShape(
-            //       borderColor: Colors.white,
-            //       borderRadius: 20,
-            //       overlayColor: Colors.blue
-            //     ),
-            //     key: qrKey, 
-            //     onQRViewCreated: _onQRViewCreated
-            //   ),
-            // )
             Expanded(
               flex: 5,
               child: QRView(

@@ -36,10 +36,6 @@ class UniversalButton extends StatelessWidget {
       width: buttonWidth,
       height: buttonHeight,
       child: ElevatedButton(
-        // shape: RoundedRectangleBorder(
-        // borderRadius: BorderRadius.circular(radius)
-        // ),
-        // key: key,
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(radius)),

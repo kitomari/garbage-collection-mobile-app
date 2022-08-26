@@ -8,16 +8,6 @@ class AddCustomer{
 
   Future<Map<String,dynamic>> addCustomer({required String name,required String hno, required String mobile, required String street, required String district, required String region, required String qr_code, required String category, required String amount, required String user_id}) async{
     try{
-      // print('$qr_code');
-      // print('$name');
-      // print('$hno');
-      // print('$mobile');
-      // print('$street');
-      // print('$district');
-      // print('$region');
-      // print('$category');
-      // print('$user_id');
-      // print('$amount');
       http.Response response = await http.post(
         Uri.parse('$uri/api/add_customer.php'),
         body: jsonEncode({'name': name, 'hno': hno, 'mobile': mobile, 'street': street, 'district': district, 'region': region, 'qr_code': qr_code, 'category': category, 'amount': amount, 'user_id': DataServices.userInfo!['id']}),

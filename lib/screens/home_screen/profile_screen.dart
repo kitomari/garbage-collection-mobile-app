@@ -23,7 +23,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   void initState() {
-    // getProfileData();
     super.initState();
   }
   @override
@@ -73,15 +72,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
               padding: const EdgeInsets.only(left: 10.0, top: 22, right: 10.0),
               child: Column(
                 children: [
-                  // Text('Profile', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.black),),
                   SizedBox(height: 15,),
-                  // SizedBox(height: 5,),
-                  // Text('Lets start scanning', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w300, color: Colors.white),)
                   CircleAvatar(
                     radius: 50,
                     backgroundImage: AssetImage('assets/shedrackimage.jpg'),
                   ),
-                  // Text("Shedrack Kitomari", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
                   ListTile(
                     title: Text("${DataServices.userInfo!['names']}", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold,), textAlign: TextAlign.center,),
                     subtitle: Text("${DataServices.userInfo!['username']}",textAlign: TextAlign.center,),
@@ -101,11 +96,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   InfoCard(text: '${DataServices.userInfo!['contact']}', icon: Icons.phone, color: Colors.black87),
                   InfoCard(text: 'Agent: 2038', icon: Icons.verified,color: Colors.black87),
                   InfoCard(text: 'Date joined: 03 Aug 2022', icon: Icons.calendar_today_outlined,color: Colors.black87),
-                  // InfoButton(text: 'Logout', color: Colors.blue, onTap: (){})
                 ],
               ),
             ),
-            // const SizedBox(height: 30,),
           ],
 
         ),
